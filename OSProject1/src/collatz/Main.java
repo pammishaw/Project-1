@@ -1,6 +1,8 @@
 package collatz;
 import java.lang.Thread;
 import java.util.concurrent.locks.ReentrantLock;
+import java.time.Instant;
+import java.time.Duration;
 
 public class Main {
 
@@ -14,6 +16,8 @@ public class Main {
 		
 		Worker[] workers = new Worker[numWorkers];
 		Thread[] threads = new Thread[numWorkers];
+		
+		Instant beginning = Instant.now();
 		
 		for(int i = 0; i < numWorkers; i++) {
 			workers[i] = new Worker(counter, histogram, lock);
@@ -29,9 +33,19 @@ public class Main {
 			}
 		}
 		
+		Instant end = Instant.now();
+		
+		Duration timeLapse = Duration.between(beginning, end);
+		
+		// Display the histogram
+		
 		for(int i = 1; i < histogram.length; i++) {
-			
+			if(histogram[i] > 0) {
+			System.out.println(i + " " + histogram[i]);
+			}
 		}
+		
+		System.err.printf("%d,%d,%.9f%n", numRange, numWorkers, timeLapse.toMillis());
 
 	}
 

@@ -16,8 +16,9 @@ public class Worker implements Runnable{
 
 	@Override
 	public void run() {
-		int value = counter.getNext();
+		
 		while(true) {
+			int value = counter.getNext();
 			if(value == -1) {
 				break;
 			}
