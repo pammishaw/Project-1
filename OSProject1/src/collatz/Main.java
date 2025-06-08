@@ -45,7 +45,7 @@ public class Main {
 			}
 		}
 		
-		System.err.printf("%d,%d,%.9f%n", numRange, numWorkers, timeLapse.toMillis());
+		System.err.printf("%d,%d,%.9f%n", numRange, numWorkers, (double)timeLapse.toMillis());
 
 	}
 
