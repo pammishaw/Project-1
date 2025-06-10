@@ -7,8 +7,15 @@ import java.time.Duration;
 public class Main {
 
 	public static void main(String[] args) {
+		/*if (args.length < 2){ 
+         	   System.err.printIn("Usage: java main <numRange> <numWorkers> [-nolock]");
+          	   return;
+        	}*/
+		// ensure 2 arguments? 
 		int numRange = Integer.parseInt(args[0]);
 		int numWorkers = Integer.parseInt(args[1]);
+
+		// add useLock = false for length argument?? 
 		
 		Counter counter = new Counter(numRange);
 		int[] histogram = new int[2000];
