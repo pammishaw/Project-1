@@ -22,14 +22,7 @@ public class Counter{
 		finally {
 			lock.unlock();
 		}
-		/* to avoid runntime 
-		synchronized (histogram) {
-			if (stoppingTime < histogram.length) {
-			histogram [stoppingTime++];
-			}
-		}
-		*/
-		
+
 	}
 
 }
