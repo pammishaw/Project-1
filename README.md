@@ -61,7 +61,7 @@ java MTCollatz <numRange> <numWorkers>
 
 ## Authors
 - Pamela Mishaw
-- Zafeerah Hamid
+- Zaaferah Hamid
 
 ## Course Information
 COP5518 Computing Essentials
