@@ -19,13 +19,13 @@
  * @info Course COP5518
  */
 
-package collatz;
+//package collatz;
 import java.lang.Thread;
 import java.util.concurrent.locks.ReentrantLock;
 import java.time.Instant;
 import java.time.Duration;
 
-public class Main {
+public class MTCollatz {
 
 	public static void main(String[] args) {
 		if (args.length < 2){ 

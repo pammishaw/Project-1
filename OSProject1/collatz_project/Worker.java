@@ -8,7 +8,7 @@
  * @info Course COP5518
  */
 
-package collatz;
+//package collatz;
 
 import java.util.concurrent.locks.ReentrantLock;
 

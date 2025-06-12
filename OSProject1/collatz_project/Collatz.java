@@ -11,7 +11,7 @@
  * @info Course COP5518
  */
 
-package collatz;
+//package collatz;
 
 public class Collatz {
 
@@ -22,7 +22,7 @@ public class Collatz {
      * @return the number of steps to reach 1 using the Collatz algorithm
      * @throws IllegalArgumentException if the input is less than 1
      */
-	
+
 	public static int computeCollatzStoppingTime(int n) {
 
 		if (n < 1) {
