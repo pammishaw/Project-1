@@ -62,6 +62,12 @@ public class MTCollatz {
 		Instant end = Instant.now();
 		
 		Duration timeLapse = Duration.between(beginning, end);
+
+		// Get the seconds and nanoseconds portions from timeLapse
+		long seconds = timeLapse.getSeconds();
+		int nanosec = timeLapse.getNano();
+
+		double elapsedMillis = seconds * 1000 + nanosec / 1_000_000.0;
 		
 		for(int i = 1; i < histogram.length; i++) {
 			if(histogram[i] > 0) {
@@ -69,7 +75,7 @@ public class MTCollatz {
 			}
 		}
 		
-		System.err.printf("%d,%d,%.9f%n", numRange, numWorkers, (double)timeLapse.toMillis());
+		System.err.printf("%d,%d,%.4f%n", numRange, numWorkers, elapsedMillis);
 
 	}
 
