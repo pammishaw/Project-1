@@ -1,4 +1,4 @@
-# Mult-Threaded Collatz Stopping Time Generator Project
+# Multi-Threaded Collatz Stopping Time Generator Project
 This Java program calculates the Collatz stopping times for all integers in the range from 1 to N, using multiple threads to parallelize the work. The results are displayed as a histogram showing the frequency of each stopping time.
 
 ## Overview
